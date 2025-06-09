@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 520px;
+    margin: 48px auto;
+    background: #fff;
+    padding: 32px 36px 36px 36px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(80, 112, 255, 0.10);
+}
+h1 {
+    text-align: center;
+    color: #4f46e5;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+input[type="text"] {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f1f5f9;
+}
+input[type="datetime-local"] {
+    flex: 1.5;
+    padding: 10px;
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f1f5f9;
+}
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #6366f1;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 6px rgba(99,102,241,0.08);
+}
+button:hover {
+    background: #4338ca;
+    transform: translateY(-2px) scale(1.04);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f4f6;
+    margin-bottom: 14px;
+    padding: 16px 14px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(99,102,241,0.04);
+    transition: background 0.2s, color 0.2s;
+    position: relative;
+}
+.task.overdue {
+    background: #ffeaea;
+    color: #d8000c;
+}
+.task.completed {
+    background: #e6fbe6;
+    color: #1a7f37;
+}
+.task.completed .info span:first-child {
+    text-decoration: line-through;
+    color: #1a7f37;
+}
+.task .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.task .actions {
+    display: flex;
+    gap: 8px;
+}
+.task input[type="text"],
+.task input[type="datetime-local"] {
+    margin-bottom: 4px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #c7d2fe;
+    background: #f1f5f9;
+}
+.tick-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 12px;
+    font-size: 1.3em;
+    color: #a3a3a3;
+    transition: color 0.2s, transform 0.1s;
+}
+.tick-btn.done {
+    color: #22c55e;
+    transform: scale(1.2);
+}
+.tick-btn:focus {
+    outline: none;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 12px 4vw 18px 4vw;
+    }
+    form {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
